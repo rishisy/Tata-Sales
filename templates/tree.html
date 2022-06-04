@@ -1,0 +1,13 @@
+
+ <!-- This template is used to recursively show parents -->
+{% if child.parents %}
+        
+        {% for x in child.parents.all %}
+
+            ----{{x.name}}
+
+        {% include 'tree.html' with child=x %}
+
+        {% endfor %}
+
+{% endif %}
