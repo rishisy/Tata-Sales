@@ -14,7 +14,7 @@ Assumes you have python3...
 
 Since we want to use postgres as our production database, we should make sure that any local development is also done with postgres. Setting postgres up to run on a machine locally is more of a hassle than the default 'db.sqlite3' database that django, but using it locally ensures that no weird errors crop up by having different database implementations across environments development and production environments.
 
-##### Note
+
 
 ### To Setup up Postgres Locally on a Mac
 
@@ -28,3 +28,10 @@ Since we want to use postgres as our production database, we should make sure th
 8. Our new postgres user needs explicit permission to have read and write capabilities on our newly created database. We can do that with the command `GRANT ALL PRIVILEGES ON DATABASE "djangotutorial" to djangotutorial;` .  
 9. Exit out of postgres 
 
+### Connect Postgres with Django
+
+1. Make sure you have your postgres username and Database name before doing this step
+2. Go the settings.py in the main app (tata) and modify the database values according to your configration
+3. Make migrations using `Python3 manage.py makemigrations`
+4. Then use the migrate command `Python3 manage.py migrate`
+5. Run the Server to see Everything went right `python3 manage.py runserver`
