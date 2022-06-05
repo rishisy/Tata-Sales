@@ -1,5 +1,6 @@
 # TATA Sales
 
+#### Note : The Security Key in the Settings.py file is not provided in the code for security Reasons , Please make a new project and copy all the contents or email me for security key
 
 ### Virtual Environment 
 
